@@ -1,6 +1,6 @@
 #ifndef _LISTCONTAINER_CPP_
 #define _LISTCONTAINER_CPP_
-#include "Container.hpp"
+#include "ListContainer.hpp"
 #include <iostream>
 using namespace std; 
 void ListContainer::print(){
@@ -20,7 +20,7 @@ void ListContainer::swap(int i, int j){
 	advance(it2, j);
 	swap(*it1,*it2);
 }
-Base* ListContainer::at(int i){
+Base::Base* ListContainer::at(int i){
 	list<Base*>::iterator it = listcon.begin();
 	return advance(it, i);
 }		

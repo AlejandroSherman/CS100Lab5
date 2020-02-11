@@ -2,6 +2,7 @@
 #define _LISTCONTAINER_HPP_
 #include "container.hpp"
 #include <list>
+using namespace std; 
 class ListContainer : public Container{
 private:
 	list<Base*> listcon;	
