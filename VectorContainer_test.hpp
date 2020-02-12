@@ -2,7 +2,7 @@
 
 #ifndef _VECTORCONTAINER_TEST_HPP_
 #define _VECTORCONTAINER_TEST_HPP_
-using namespace std; 
+using namespace std;
 #include "VectorContainer.hpp"
 #include "base.hpp"
 #include "op.hpp"
@@ -35,7 +35,7 @@ TEST(VconTest, Print_1)
 	Op* two = new Op(2);
 	Add* plus = new Add(one, two);
 	VectorContainer* test_container = new VectorContainer();
-	
+
 	test_container->add_element(plus);
 	string result = "1 + 2";
 	ASSERT_EQ(test_container->size(), 1);
@@ -69,7 +69,21 @@ TEST(VconTest, Swap1){
         test_container->swap(0,1);
         ASSERT_EQ(test_container->size(), 2);
         EXPECT_EQ(test_container->at(0)->evaluate(), 2.3);
-        EXPECT_EQ(test_container->at(1)->evaluate(), 1.5);       
+        EXPECT_EQ(test_container->at(1)->evaluate(), 1.5);
+
+}
+
+
+TEST(VconTest, Swap2){
+        Op* tenpteight = new Op(10.8);
+        Op* hundredandfive = new Op(105);
+        VectorContainer* test_container = new VectorContainer();
+        test_container->add_element(tenpteight);
+        test_container->add_element(hundredandfive);
+        test_container->swap(0,1);
+        ASSERT_EQ(test_container->size(), 2);
+        EXPECT_EQ(test_container->at(0)->evaluate(), 105);
+        EXPECT_EQ(test_container->at(1)->evaluate(), 10.8);       
 
 }
 
