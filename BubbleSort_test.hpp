@@ -39,9 +39,40 @@ TEST(SortTestSet, BubbleSortTest){
    container->set_sort_function(new BubbleSort());
    container->sort();
    ASSERT_EQ(container->size(), 3);
-   EXPECT_EQ(container->at(0)->evaluate(), 7);
+   EXPECT_EQ(container->at(0)->evaluate(), 18);
    EXPECT_EQ(container->at(1)->evaluate(), 11);
-   EXPECT_EQ(container->at(2)->evaluate(), 18);
+   EXPECT_EQ(container->at(2)->evaluate(), 7);
+}
+
+TEST(SortTestSet, BubbleSortTestList){
+   Op* five = new Op(5);
+   Op* three = new Op(3);
+   Mult* TreeA = new Mult(five, three);
+
+   Op* ten = new Op(10);
+   Op* nine = new Op(9);
+   Add* TreeB = new Add(ten, nine);
+
+   Op* eight = new Op(8);
+   Op* six = new Op(6);
+   Sub* TreeC = new Sub(eight, six);
+
+   ListContainer* container = new ListContainer();
+   container->add_element(TreeA);
+   container->add_element(TreeB);
+   container->add_element(TreeC);
+
+   ASSERT_EQ(container->size(), 3);
+   EXPECT_EQ(container->at(0)->evaluate(), 15);
+   EXPECT_EQ(container->at(1)->evaluate(), 19);
+   EXPECT_EQ(container->at(2)->evaluate(), 2);
+
+   container->set_sort_function(new BubbleSort());
+   container->sort();
+   ASSERT_EQ(container->size(), 3);
+   EXPECT_EQ(container->at(0)->evaluate(), 19);
+   EXPECT_EQ(container->at(1)->evaluate(), 15);
+   EXPECT_EQ(container->at(2)->evaluate(), 2);
 }
 
 

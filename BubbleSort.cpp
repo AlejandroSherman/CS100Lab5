@@ -10,9 +10,9 @@ void BubbleSort::sort(Container* container){
   flag = 0;
   for(j=0; j < (numLength - 1); j++)
   {
-    if (container->at(j+1) > container->at(j)){
+    if (container->at(j+1)->evaluate() > container->at(j)->evaluate()){
     container->swap(j,j+1);
-    flag = 1;    
+    flag = 1;
   }
   }
   }
