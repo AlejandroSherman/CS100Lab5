@@ -4,7 +4,9 @@
 #include "container.hpp"
 #include "sort.hpp"
 
-Class BubbleSort : public Sort{
+class Sort;
+
+class BubbleSort : public Sort{
 private:
 public:
    void sort(Container* container);

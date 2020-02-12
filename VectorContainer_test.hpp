@@ -39,5 +39,6 @@ TEST(VconTest, Print_1)
 	string result = "1 + 2";
 	ASSERT_EQ(test_container->size(), 1);
 	cout << result << endl;
+        test_container->print();
 }
 #endif

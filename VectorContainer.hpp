@@ -8,9 +8,10 @@ private:
 	vector<Base*> vectcon;
 public:
 	VectorContainer(){};
+        VectorContainer(Sort* temp){sort_function = temp; }
 	void add_element(Base* element){vectcon.push_back(element);}
 	void print(); 
-	void sort();
+	void sort(){sort_function->sort(this);}
 	void swap(int i, int j);
 	Base* at(int i);
 	int size(){return vectcon.size();}

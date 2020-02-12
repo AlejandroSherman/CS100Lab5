@@ -10,7 +10,7 @@
 //#include "mix_test.hpp"
 #include "VectorContainer_test.hpp"
 //#include "ListContainer_test.hpp"
-//#include "SelectionSort_test.hpp"
+#include "SelectionSort_test.hpp"
 //#include "BubbleSort_test.hpp"
 //TEST(OpTest, eight){
   // Op* op1 = new Op (8); 

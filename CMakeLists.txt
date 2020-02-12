@@ -7,9 +7,9 @@ SET(CMAKE_CXX_STANDARD 11)
 ADD_EXECUTABLE(test
 	unit_test.cpp
 	VectorContainer.cpp
-	ListContainer.cpp
 	BubbleSort.cpp
 	SelectionSort.cpp
+        container.cpp
 )
 
 TARGET_LINK_LIBRARIES(test gtest)

@@ -11,17 +11,20 @@ void VectorContainer::print(){
 	}
 }
 
-void VectorContainer::sort(){
-}
+//void VectorContainer::sort(){
+ //sort_function->sort(this);
+//}
 void VectorContainer::swap(int i, int j){
-	Base* a = vectcon.at(i);
-	Base* b = vectcon.at(j);
-	Base* c = a; 
-	a = b; 
-	b = c; 
-	vectcon.at(i) = a;
-	vectcon.at(j) = b;
-
+	//Base* a = vectcon.at(i);
+	//Base* b = vectcon.at(j);
+	//Base* c = a; 
+	//a = b; 
+	//b = c; 
+	//vectcon.at(i) = a;
+	//vectcon.at(j) = b;
+        Base* temp2 = vectcon.at(i);
+        vectcon.at(i) = vectcon.at(j);
+        vectcon.at(j) = temp2;
 }
 Base* VectorContainer::at(int i)
 {
